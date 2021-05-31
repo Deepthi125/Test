@@ -1,0 +1,12 @@
+<core:FragmentDefinition
+xmlns="sap.m"
+xmlns:core="sap.ui.core" >
+<Dialog>
+<Text text="Add New Product"></Text>
+<buttons>
+<Button text="Submit"></Button>
+<Button text="Close"></Button>
+</buttons>
+<Input></Input>
+</Dialog>
+</core:FragmentDefinition>

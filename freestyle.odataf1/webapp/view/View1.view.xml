@@ -1,0 +1,62 @@
+<mvc:View xmlns:table="sap.ui.table"
+    controllerName="freestyle.odataf1.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+                    <Button text="Refresh Data" press="_OdataDisplay"></Button>
+                    <Button text="Create Data" press="_OdataCreate" class="sapUiSmallMarginBegin" 
+                    type="Accept"></Button>
+                    <Button text="Delete Data" press="_OdataDelete" class="sapUiSmallMarginBegin" 
+                    type="Reject"></Button>
+                    <Button text="Update Data" press="_OdataUpdate" class="sapUiSmallMarginBegin"></Button>
+                    <Button text="Load Fragment" press="_OdataLoadfragment" class="sapUiSmallMarginBegin"></Button>
+                    <!--<List items="{/results/}">
+                    <items> 
+                    <ObjectListItem title = "{Name} {Price}"> 
+                    </ObjectListItem> 
+                    </items> 
+                    </List> --> 
+                    <Table items="{/results/}">
+                        <columns>
+                            <Column>
+                            <header>
+                            <Text text="Product Name"></Text>
+                            </header>
+                            </Column>
+                            <Column>
+                            <header>
+                            <Text text="Description"></Text>
+                            </header>
+                            </Column>
+                            <Column>
+                            <header>
+                            <Text text="Price"></Text>
+                            </header>
+                            </Column> 
+                            <Column>
+                            <header>
+                            <Text text="Rating"></Text>
+                            </header>
+                            </Column>                           
+                        </columns>   
+                        <items>
+                        <ColumnListItem>
+                        <Text text="{Name}"></Text>
+                        <Text text="{Description}"></Text>
+                        <Text text="{Price}"></Text>
+                        <Text text="{Rating}"></Text>
+                        </ColumnListItem>
+                        </items>         
+                    </Table>
+                    </content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
